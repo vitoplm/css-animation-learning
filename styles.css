@@ -1,0 +1,59 @@
+.container {
+  padding: 1rem;
+  background-color: aliceblue;
+}
+
+.btn {
+  position: absolute;
+  padding: 0.6rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  border: solid 1rem rgb(233, 12, 12);
+  z-index: 2;
+}
+
+.right {
+  left: 8rem;
+}
+
+.liquid {
+  background-color: blue;
+  width: 5.5rem;
+  top: 2.5rem;
+  transform: translateX(1rem);
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  z-index: 1;
+}
+
+.to-right {
+  animation: moveright;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.to-left {
+  animation: moveleft;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveright {
+  from {
+    transform: translateX(1rem);
+  }
+  to {
+    transform: translateX(8rem);
+  }
+}
+@keyframes moveleft {
+  from {
+    transform: translateX(8rem);
+  }
+  to {
+    transform: translateX(1rem);
+  }
+}
