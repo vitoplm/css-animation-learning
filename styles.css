@@ -1,59 +1,109 @@
 .container {
-  padding: 1rem;
-  background-color: aliceblue;
+  display: flex;
+  width: 14rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-container {
+  height: 2rem;
+  width: 6rem;
+  position: relative;
+  overflow-x: hidden;
+  border-radius: 1rem;
+  box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+  transition: all 300ms;
 }
 
 .btn {
-  position: absolute;
-  padding: 0.6rem;
-  text-transform: uppercase;
-  font-weight: 900;
-  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 1rem;
   background-color: transparent;
-  border: solid 1rem rgb(233, 12, 12);
-  z-index: 2;
+  width: 6rem;
+  height: 2rem;
+  text-align: center;
+  color: #455d7a;
+  font-family: Google Sans, Roboto, Arial, sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.05rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.6s;
 }
 
-.right {
-  left: 8rem;
+.btn:focus {
+  color: white;
+  transition: all 0.4s;
+  transition-delay: 0.4s;
+}
+
+
+.btn-container:hover {
+  box-shadow: 0px 2px 6px rgb(0 0 0 / 25%);
+  transform: translateY(0.15rem);
+  transition: all 200ms;
 }
 
 .liquid {
-  background-color: blue;
-  width: 5.5rem;
-  top: 2.5rem;
-  transform: translateX(1rem);
-  height: 2.5rem;
-  border-radius: 0.5rem;
+  height: 2rem;
+  width: 6rem;
   position: absolute;
-  z-index: 1;
+  border-radius: 1rem;
+  background-color: #f95959;
+  z-index: -1;
 }
 
-.to-right {
-  animation: moveright;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+.right {
+  animation: moveright 0.7s forwards;
 }
 
-.to-left {
-  animation: moveleft;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+.right-back {
+  animation: moveright-back 0.8s forwards;
+}
+
+.left {
+  animation: moveleft 0.8s forwards;
+}
+
+.left-back {
+  animation: moveleft-back 0.7s forwards;
 }
 
 @keyframes moveright {
   from {
-    transform: translateX(1rem);
+    transform: translateX(0rem);
   }
   to {
     transform: translateX(8rem);
   }
 }
-@keyframes moveleft {
-  from {
+@keyframes moveright-back {
+  0% {
     transform: translateX(8rem);
   }
+  10% {
+    transform: translateX(8rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+@keyframes moveleft {
+  0% {
+    transform: translateX(-8rem);
+  }
+  10% {
+    transform: translateX(-8rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+@keyframes moveleft-back {
+  from {
+    transform: translateX(0rem);
+  }
   to {
-    transform: translateX(1rem);
+    transform: translateX(-8rem);
   }
 }

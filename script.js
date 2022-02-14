@@ -1,11 +1,16 @@
-function toRight() {
-  let liquid = document.getElementById('1');
-  liquid.classList.remove('to-left');
-  liquid.classList.add('to-right');
-}
+function move() {
+  let liquid1 = document.getElementById('1');
+  let liquid2 = document.getElementById('2');
 
-function toLeft() {
-  let liquid = document.getElementById('1');
-  liquid.classList.remove('to-right');
-  liquid.classList.add('to-left');
+  if (liquid1.classList.contains('right')) {
+    liquid1.classList.replace('right', 'right-back');
+  } else if (liquid1.classList.contains('right-back')) {
+    liquid1.classList.replace('right-back', 'right');
+  }
+
+  if (liquid2.classList.contains('left')) {
+    liquid2.classList.replace('left', 'left-back');
+  } else if (liquid2.classList.contains('left-back')) {
+    liquid2.classList.replace('left-back', 'left');
+  }
 }

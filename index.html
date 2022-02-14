@@ -2,13 +2,23 @@
   <head>
     <meta charset="UTF-8" />
     <script src="script.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i');
+    </style>
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
+
   <body>
     <div class="container">
-      <div id="1" class="liquid"></div>
-      <button class="btn" onclick="toLeft()">Button 1</button>
-      <button class="btn right" onclick="toRight()">Button 2</button>
+      <div class="btn-container">
+        <div id="1" class="liquid right-back"></div>
+        <button class="btn" onclick="move()">Bello</button>
+      </div>
+
+      <div class="btn-container">
+        <div id="2" class="liquid left-back"></div>
+        <button class="btn" onclick="move()">Bottone</button>
+      </div>
     </div>
   </body>
 </html>
