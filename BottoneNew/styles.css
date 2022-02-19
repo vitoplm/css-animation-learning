@@ -68,41 +68,93 @@
   animation: moveleft-back 0.7s forwards;
 }
 
+.goccia {
+  margin: 4rem;
+  width: 3rem;
+  height: 2rem;
+  background-color: #f95959;
+  border-radius: 20px 40px 40px 20px / 20px 20px 20px 20px;
+}
+
 @keyframes moveright {
-  from {
+  0% {
     transform: translateX(0rem);
+    border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
   }
-  to {
+  20% {
+    border-radius: 60px 20px 20px 60px / 20px 20px 20px 20px;
+  }
+  40% {
+    border-radius: 100px 20px 20px 100px / 20px 20px 20px 20px;
+  }
+  60% {
+    border-radius: 200px 20px 20px 200px / 20px 20px 20px 20px;
+  }
+  80% {
+    border-radius: 300px 20px 20px 300px / 20px 20px 20px 20px;
+  }
+  100% {
     transform: translateX(8rem);
+    border-radius: 300px 20px 20px 300px / 20px 20px 20px 20px;
   }
 }
 @keyframes moveright-back {
   0% {
     transform: translateX(8rem);
+    width: 3rem;
+    border-radius: 20px 40px 40px 20px / 20px 20px 20px 20px;
   }
   20% {
     transform: translateX(8rem);
   }
-  100% {
+  90% {
+    width: 3rem;
     transform: translateX(0rem);
+    border-radius: 20px 40px 40px 20px / 20px 20px 20px 20px;
+  }
+  100% {
+    width: 6rem;
+    border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
   }
 }
 @keyframes moveleft {
   0% {
     transform: translateX(-8rem);
+    width: 3rem;
+    border-radius: 40px 20px 20px 40px / 20px 20px 20px 20px;
   }
   20% {
     transform: translateX(-8rem);
   }
+  90% {
+    width: 3rem;
+    transform: translateX(3rem);
+    border-radius: 40px 20px 20px 40px / 20px 20px 20px 20px;
+  }
   100% {
-    transform: translateX(0rem);
+    width: 6rem;
+    border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
   }
 }
 @keyframes moveleft-back {
-  from {
+  0% {
     transform: translateX(0rem);
+    border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
   }
-  to {
+  20% {
+    border-radius: 20px 60px 60px 20px/ 20px 20px 20px 20px;
+  }
+  40% {
+    border-radius: 20px 100px 100px 20px/ 20px 20px 20px 20px;
+  }
+  60% {
+    border-radius: 20px 200px 200px 20px/ 20px 20px 20px 20px;
+  }
+  80% {
+    border-radius: 20px 300px 300px 20px / 20px 20px 20px 20px;
+  }
+  100% {
     transform: translateX(-8rem);
+    border-radius: 20px 300px 300px 20px / 20px 20px 20px 20px;
   }
 }
