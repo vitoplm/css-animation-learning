@@ -48,7 +48,7 @@
   height: calc(1rem * var(--h));
   width: calc(1rem * var(--w));
   position: absolute;
-  border-radius: 1rem;
+  border-radius: qrem;
   background-color: #f95959;
   z-index: -1;
 }
