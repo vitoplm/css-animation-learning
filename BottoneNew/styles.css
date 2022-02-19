@@ -6,8 +6,8 @@
 }
 
 .btn-container {
-  height: 2rem;
-  width: 6rem;
+  height: calc(1rem * var(--h));
+  width: calc(1rem * var(--w));
   position: relative;
   overflow-x: hidden;
   border-radius: 1rem;
@@ -19,8 +19,9 @@
   border: none;
   border-radius: 1rem;
   background-color: transparent;
-  width: 6rem;
-  height: 2rem;
+  width: calc(1rem * var(--w));
+  height: calc(1rem * var(--h));
+
   text-align: center;
   color: #455d7a;
   font-family: Google Sans, Roboto, Arial, sans-serif;
@@ -44,8 +45,8 @@
 }
 
 .liquid {
-  height: 2rem;
-  width: 6rem;
+  height: calc(1rem * var(--h));
+  width: calc(1rem * var(--w));
   position: absolute;
   border-radius: 1rem;
   background-color: #f95959;
